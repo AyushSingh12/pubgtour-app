@@ -1,0 +1,30 @@
+<div class="container">
+<nav class="navbar">
+  <input class ="form-control" type="text" name="Name" [(ngModel)]="Name" (ngModelChange)="search()"
+  placeholder="Enter Player Name to search">
+</nav>
+  <table class="table table-hover table-responsive-lg">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Weapon_Mastery</th>
+      <th scope="col">Solo</th>
+      <th scope="col">Duo</th>
+      <th scope="col">Squad</th>
+      <th scope="col">AverageDamage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor ="let req of res | paginate: {itemsPerPage:10, currentPage:p}; ">
+      <td >{{req.Name}}</td>
+      <td >{{req.Weapon_Mastery}}</td>
+      <td >{{req.Solo}}</td>
+      <td >{{req.Duo}}</td>
+      <td >{{req.Squad}}</td>
+      <td >{{req.AverageDamage}}</td>
+    </tr>
+  </tbody>
+  <pagination-controls  (pageChange)="p = $event"></pagination-controls>
+</table>
+</div>
+

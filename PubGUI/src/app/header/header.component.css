@@ -1,0 +1,41 @@
+.spacer{
+  flex: 1 1 auto;
+}
+.logo{
+  height: 3.5rem;
+  width: 6rem;
+}
+
+.title{
+  text-shadow: 0.1rem 0.1rem orange;
+  flex: 1 1 auto;
+}
+.mat-button{
+  margin-right: 1rem;
+}
+.mat-button:hover{
+  background-color: whitesmoke;
+  text-decoration: none;
+  color: black;
+
+}
+
+
+@media only screen and (max-width: 500px) {
+    .carousel-inner .item img {
+        height: 250px !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .input-group {
+        margin-top: 0px!important;
+    }
+}
+
+
+
+
+
+
+

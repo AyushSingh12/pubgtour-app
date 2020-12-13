@@ -1,0 +1,24 @@
+
+.detail-card {
+    max-width: 250px;
+    margin: 1%;
+    height: auto;
+}
+.detail-overview > p {
+    display: grid;
+}
+.detail-header {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.nor-buttons > button {
+    width: 100%;
+}
+.fav-buttons{
+    display: flex;
+    padding-left: 10px;
+}
+span {
+    display: flex;
+}

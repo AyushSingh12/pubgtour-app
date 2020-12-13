@@ -1,0 +1,39 @@
+<mat-toolbar class="mat-elevation-z6">
+
+   <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-dark">
+
+     <a class="navbar-brand" href="#">
+        <img src="/assets/img/PngItem_109452.png" width="60" height="40"  class="d-inline-block align-top"  alt="Pubg Logo">
+        <span class="title">PUBG Tour</span>
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a mat-button routerLink="/home"><mat-icon>public</mat-icon>Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a mat-button routerLink="/home/tournaments"><mat-icon>public</mat-icon>Tournaments</a>
+          </li>
+          <li class="nav-item">
+            <a mat-button routerLink="/home/favourities"><mat-icon>favorite_border</mat-icon>Favourites</a>
+          </li>
+          <li class="nav-item">
+            <a mat-raised-button color="accent" *ngIf="!(isLoggedIn$ | async)" routerLink="/login"><mat-icon>person_outline</mat-icon>Login</a>
+          </li>
+          <li class="nav-item">
+            <a mat-raised-button  *ngIf="(isLoggedIn$ | async)" (click)="onLogout()" routerLink="/login"><mat-icon>person_outline</mat-icon>Logout</a>
+          </li>
+        </ul>
+        <form class="form-inline pull-xs-right  navbar-dark bg-dark">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="/search">Search Players</button>
+        </form>
+      </div>
+    </nav>
+
+
+</mat-toolbar>
+
